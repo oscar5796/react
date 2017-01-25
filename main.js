@@ -10,5 +10,5 @@ import Menu from './menu.js';
 
 ReactDOM.render(<App />, document.getElementById('app'));
 ReactDOM.render(<Ejemplo/>, document.getElementById('other'));
-ReactDOM.render(<Menu/>, document.getElementById('other'));
+ReactDOM.render(<Menu/>, document.getElementById('example'));
 
