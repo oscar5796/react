@@ -2,20 +2,28 @@
  * Created by oscar.santisteban on 1/24/2017.
  */
 import React from 'react';
-const App = React.createClass({
-    getInitialState() {
-        return { num: Math.ceil(Math.random() * 6) };
-    },
-    getNumeroAleatorio() {
+
+
+class App extends React.Component{
+
+    constructor(){
+        super();
+        this.state = {num:0};
+    }
+/*
+    componentWillMount(){
+        this.state = {num:0};
+    }*/
+    changeNumber(){
         this.setState({num:Math.ceil(Math.random() * 6)});
-    },
-    render() {
+    }
+    render(){
         return (
             <div>
                 <p>{this.state.num}</p>
-                <button onClick={this.getNumeroAleatorio}>Lanzar</button>
+                <button onClick={()=>this.changeNumber()}>Lanzar</button>
             </div>
         )
     }
-});
+}
 export default App;

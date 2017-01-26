@@ -3,12 +3,17 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App.js';
-import Ejemplo from './Ejemplo.js';
-import Menu from './menu.js';
+
+import MainComponent from './MainComponent.js';
+import {Provider} from 'react-redux';
+import store from './menu'
 
 
-ReactDOM.render(<App />, document.getElementById('app'));
-ReactDOM.render(<Ejemplo/>, document.getElementById('other'));
-ReactDOM.render(<Menu/>, document.getElementById('example'));
+ReactDOM.render(
+    <Provider store={store}>
+        <MainComponent />
+    </Provider>,
+    document.getElementById('app')
+);
+
 
